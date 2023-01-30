@@ -26,7 +26,7 @@
         <form id="search-form" class="form">
           <div class="form-inline form-group">
             <div class="input-group">
-              <input class="form-input weather-search" type="text" id="search-input" placeholder="London"
+              <input class="form-input weather-search" type="text" id="cityName" placeholder="London"
                 aria-labelledby="form-heading" aria-controls="today forecast" />
               <div class="input-group-append">
                 <button type="submit" class="btn search-button" id="search-button" aria-label="submit search">
@@ -45,8 +45,107 @@
         <section id="forecast" class="row mt-3" role="region" aria-live="polite"></section>
       </div>
     </div>
-  </div>
+  </div> 
 
+  <div class="col-md-8 container-left-columns">
+    <!--Current city-->
+    <div class="row">
+        <div class="card card-city">
+            <div class="card-body">
+                <p class="current-date"></p>
+                <p class="city"></p>
+                <p class="weather-icon"></p>
+                <p class="temperature"></p>
+                <p class="humidity"></p>
+                <p class="wind"></p>
+                <p class="uv"></p>
+            </div>
+        </div>
+    </div>
+
+    <!--5 Day Forecast Title-->
+    <div class="row-blue">
+    <div class="row">
+        <div class="forecast-title">
+            <div class="cbforecast">
+                <h5>5-Day Forecast:</h5>
+            </div>
+        </div>
+    </div>
+
+    <!--5 Day Forecast Days-->
+    <div class="row gutters">
+        <!--Day 1-->
+            <div class="col">
+                <div class="card forecast-day">
+                    <div class="card-body bg-primary">
+                        <p class="day-one-date"></p>
+                        <p class="day-one-icon"></p>
+                        <p class="day-one-temperature"></p>
+                        <p class="day-one-humidity"></p>
+                    </div>
+        
+                </div>
+
+            </div>
+        <!--Day 2-->
+            <div class="col">
+                <div class="card forecast">
+                    <div class="card-body bg-primary">
+                        <p class="day-two-date"></p>
+                        <p class="day-two-icon"></p>
+                        <p class="day-two-temperature"></p>
+                        <p class="day-two-humidity"></p>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Day 3-->
+            <div class="col">
+                <div class="card forecast">
+                    <div class="card-body bg-primary">
+                        <p class="day-three-date"></p>
+                        <p class="day-three-icon"></p>
+                        <p class="day-three-temperature"></p>
+                        <p class="day-three-humidity"></p>
+                    </div>
+                </div>
+            </div>
+
+        <!--Day 4-->
+            <div class="col">
+                <div class="card forecast">
+                    <div class="card-body bg-primary">
+                        <p class="day-four-date"></p>
+                        <p class="day-four-icon"></p>
+                        <p class="day-four-temperature"></p>
+                        <p class="day-four-humidity"></p>
+                    </div>
+                </div>
+            </div>
+            
+        <!--Day 5-->
+            <div class="col">
+                <div class="card forecast">
+                    <div class="card-body bg-primary">
+                        <p class="day-five-date"></p>
+                        <p class="day-five-icon"></p>
+                        <p class="day-five-temperature"></p>
+                        <p class="day-five-humidity"></p>
+                    </div>
+                </div>
+            </div>
+        <!--End Days-->
+
+    </div>
+    </div>
+
+</div>
+
+
+
+  <div class="clearCities"></div><button>Clear Saved Cities</button></div>
+  
   <!-- Moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   <!-- jQuery -->
